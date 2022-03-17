@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const {insertObject} = require('../databaseHandler')
 
 //neu request la: /admin/register
 router.get('/register',(req,res)=>{
@@ -18,7 +19,7 @@ router.post('/register',(req,res)=>{
     }
     //goi ham insert: bang Users, new user trong objectToInsert
     insertObject("Users",objectToInsert)
-    res.render('adminIndex')
+    res.render('home')
 })
 
 module.exports = router;
