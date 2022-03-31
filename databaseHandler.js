@@ -1,8 +1,7 @@
 const async = require('hbs/lib/async');
 const {MongoClient,ObjectId} = require('mongodb');
 
-const URL = 'mongodb://tommy:123456789mu@cluster0-shard-00-00.lkrga.mongodb.net:27017,cluster0-shard-00-01.lkrga.mongodb.net:27017,cluster0-shard-00-02.lkrga.mongodb.net:27017/test?replicaSet=Cluster0-shard-0&ssl=true&authSource=admin';
-const DATABASE_NAME = "GCH0902-ApplicationDev"
+
 
 async function getDB() {
     const client = await MongoClient.connect(URL);
