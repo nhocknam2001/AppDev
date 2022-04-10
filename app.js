@@ -18,6 +18,7 @@ const adminController = require('./controllers/admin')
 //tat ca cac dia chi co chua admin: localhost:5000/admin/... => goi controller admin
 app.use('/admin', adminController)
 
+//update shopping cart
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT)
