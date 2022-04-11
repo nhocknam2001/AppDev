@@ -14,6 +14,7 @@ app.get('/',(req,res)=>{
     //res.render('home')
 })
 
+
 const adminController = require('./controllers/admin')
 //tat ca cac dia chi co chua admin: localhost:5000/admin/... => goi controller admin
 app.use('/admin', adminController)
