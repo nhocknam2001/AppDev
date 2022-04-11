@@ -19,7 +19,7 @@ const adminController = require('./controllers/admin')
 app.use('/admin', adminController)
 
 //update shopping cart
-//edit UI for shopping cart
+//edit UI for shopping cart ohno
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT)
