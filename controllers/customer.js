@@ -43,5 +43,52 @@ router.get('/buy',(req,res)=>{
     res.render('buy',{'products':products})
 })
 
+<<<<<<< HEAD
 module.exports = router;
 //
+=======
+router.get('/feedback', async (req, res) => {
+
+    const id = req.query.fb
+    console.log(id)
+    const dbo = await getDatabase();
+    
+    const order = await dbo.collection('Order').findOne({_id: ObjectId(id)});
+    const email = order.email
+    res.render('feedbackUser', {totalProduct:totalProduct, email: email, idOrder: order.id})
+
+})
+
+router.post('/feedback', async (req, res) => {
+    
+    const fb = req.body.feedback
+    var id = req.body.id
+    const email = req.body.email
+    console.log(id)
+    var d = new Date();
+    const date = [d.getDate(), d.getMonth() + 1, d.getFullYear()].join('/') + ' ' + [d.getHours(),d.getMinutes(),d.getSeconds()].join(':');
+    const dbo = await getDatabase();
+    
+    // const order = await dbo.collection('Order').findOne({_id: ObjectId(id)});
+    // console.log(order)
+    const user = await dbo.collection('Customer').findOne({email: email});
+    
+    
+    const collectionName = 'Feedback' 
+    const newOrder = {
+        nameCustomer: user.fullName,
+        date: date,
+        feedback: fb,
+        emailCustomer: email,
+        idOrder: id.toHexString()
+    }
+    await insertObjectToCollection(collectionName, newOrder)
+
+    // const category = await categories()
+    var status = 'Feedback/Cancel order successful'
+    res.redirect('/user/purchaseHistory?email='+email)
+
+})
+
+module.exports = router;
+>>>>>>> 5c182a9c5d79e0aca692bf86835f55d79c9aecad
