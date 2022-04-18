@@ -43,6 +43,10 @@ router.get('/buy',(req,res)=>{
     res.render('buy',{'products':products})
 })
 
+<<<<<<< HEAD
+module.exports = router;
+//
+=======
 router.get('/feedback', async (req, res) => {
 
     const id = req.query.fb
@@ -87,3 +91,4 @@ router.post('/feedback', async (req, res) => {
 })
 
 module.exports = router;
+>>>>>>> 5c182a9c5d79e0aca692bf86835f55d79c9aecad
