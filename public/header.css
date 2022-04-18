@@ -1,0 +1,206 @@
+header {
+    background-color: #2196F3;
+    padding: 10px 15px;
+}
+header nav .navbar-nav .nav-link {
+    color: #efefef !important;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0px 18px !important;
+}
+header .navbar-brand {  
+    max-width: 100px;  
+    width: 50px;
+    height: 50px;
+    
+}
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+    /* background-color: #4CAF50; */
+    color: white;
+    /* padding: 16px;
+    font-size: 16px; */
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #0d6efd;
+  }
+
+
+/* Header Search Bar */
+.header-search input[type="text"] {
+    border: none;
+}
+.header-search .input-group-addon button {
+    color: #fff;
+    background: #ef2d2c;
+    padding: 10px 15px;
+    border: none;
+    font-size: 12px;
+}
+.select-style {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.select-style select {
+    width: 100%;
+    background: #efefef;
+    color: #000;
+    height: 38px;
+    padding: 0px 9px;
+    border: none;
+    outline: none;
+}
+.select-style select option.topshow {
+    padding: 10px 0;
+    position: relative;
+    top: 15px;
+}
+/* End Header Search Bar */
+
+
+/* Header cart CSS */
+header .cart a {
+    color: #fff;
+    text-decoration: none;
+}
+header .cart {
+    position: relative;
+    left: -15px;
+}
+header .cart a span.number {
+    position: relative;
+    left: 38px;
+    top: -4px;
+    color: #ef2d2c;
+}
+header .cart a span.number {
+    position: relative;
+    left: 38px;
+    top: -4px;
+    color: #ffffff;
+}
+header .cart a {
+    color: #fff;
+    text-decoration: none;
+}
+/* End Header cart CSS */
+
+
+/* choose store checkbox CSS */
+header [type="radio"]:checked + label,
+header [type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #fff;
+    font-family: "Conv_VisueltPro-Regular";
+    font-size: 14px;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 991px) {
+    header .cart a img {
+        width: 30px;
+        margin-left: 10px;
+    }
+    header .cart a span.number {
+        left: 40px;
+        top: -7px;
+        font-size: 14px;
+    }
+    header {
+        padding: 10px 0px;
+    }
+    .cart-login {
+        position: absolute;
+        right: 70px;
+    }
+    header .navbar-brand {
+        max-width: 150px;
+    }
+}
+
+
+
+html,body{
+    height: 100%;
+}
+.container{
+   height: 100%;
+   align-content: center;
+}
+
+.image_outer_container{
+   margin-top: auto;
+   margin-bottom: auto;
+   border-radius: 50%;
+   position: relative;
+}
+
+.image_inner_container{
+   border-radius: 50%;
+   padding: 5px;
+background: #833ab4; 
+background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); 
+background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+}
+.image_inner_container img{
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   border: 5px solid white;
+}
+
+.image_outer_container .green_icon{
+ background-color: #4cd137;
+ position: absolute;
+ right: 15px;
+ bottom: 5px;
+ height: 15px;
+ width: 15px;
+ border:5px solid white;
+ border-radius: 50%;
+}
