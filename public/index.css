@@ -1,0 +1,74 @@
+.product {
+    margin: 40px;
+    margin-left: 120px;
+    font-size: 20px;
+    font-weight: bold;
+   
+    
+}
+
+.Display_product:hover {
+    text-decoration: underline;
+    
+}
+
+#name:hover {
+    color: red;
+    text-decoration: underline;
+    
+}
+
+#contact1 {
+    position: absolute;
+    top: 10px;
+    left: 45% ;
+}
+
+#contact2 {
+    position: absolute;
+    top: 70px;
+    left: 38%;
+}
+
+#contact3 {
+    position: absolute;
+    top: 150px;
+    left: 38%;
+    padding: 15px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+#contact4 {
+    position: absolute;
+    top: 150px;
+    left: 54%;
+    padding: 15px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+#contact3:hover {
+    
+    background-color: rgb(0, 4, 250);
+    
+}
+
+#contact4:hover {
+    
+    background-color: rgb(193 53 132);
+   
+}
+
+/* #index {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+} */

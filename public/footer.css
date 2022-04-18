@@ -1,0 +1,39 @@
+#main{
+    position: relative;
+    width: 100%;
+    /* bottom: 0; */
+    
+}
+
+
+.footer_top{
+    width: 33%;
+    display: inline-block;
+    color: white;
+    padding-top: 0px;
+    text-align: center;
+
+}
+
+footer{
+    background-color: #2196F3;
+  
+}
+.li_footer {
+    display: block;
+    list-style-type: none;
+    
+}
+#ul_footer{
+    padding-left: 0px;
+}
+
+hr{
+    width: 70%;
+    
+}
+
+.a_footer{
+    font-weight: normal;
+    color: white;
+}
