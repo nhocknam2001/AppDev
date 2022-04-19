@@ -31,7 +31,7 @@
                 <div class="col-lg-6 col-md-6">
                     <nav class="navbar navbar-expand-xl navbar-light">
                         <div class="container-fluid">
-                            <a href="/" class="navbar-brand" style="color: blue; font-weight: bold"><img
+                            <a href="/" class="navbar-brand" style="color: white; font-weight: bold"><img
                                     src="LogoFpt.png" alt="logo" class="img-fluid" />Book</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -45,21 +45,23 @@
                                     </li> --}}
                                     <li class="nav-item">
                                         <div class="dropdown">
-                                            <a class="nav-link dropbtn dropdown-toggle" href="#">Category</a>
+                                            <a class="nav-link dropbtn dropdown-toggle" href="#">Category List</a>
                                             {{!-- <button class="dropbtn">Dropdown</button> --}}
                                             <div class="dropdown-content">
                                                 {{#each category}}
                                                 <a href="#">{{name}}</a>
                                                 {{/each}}
+                                                {{!-- <a href="#">Link 2</a>
+                                                <a href="#">Link 3</a> --}}
                                             </div>
                                         </div>
                                     </li>
 
                                     <li class="nav-item">
-                                        <b class="nav-link" href="#">Notify</b>
+                                        <a class="nav-link" href="#">Notify</a>
                                     </li>
                                     <li class="nav-item">
-                                        <b class="nav-link" href="#"><i class="fas fa-phone-alt"></i> 0123456789</b>
+                                        <a class="nav-link" href="#"><i class="fas fa-phone-alt"></i> 0379172187</a>
                                     </li>
                                 </ul>
                             </div>
@@ -74,6 +76,7 @@
                                 <div class="input-group">
                                     
                                     <input type="text" name="txtSearch" id="search" class="form-control"
+                                        placeholder="Search Here" />
                                     <div class="input-group-addon">
                                         <button onclick="search();" type="submit" ><i class="fas fa-search"></i></button>
                                     </div>
@@ -106,6 +109,18 @@
         </div>
     </header>
 
+
+
+
+    {{!-- <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+    </nav>
+    <nav class="navbar navbar-dark bg-primary">
+        <!-- Navbar content -->
+    </nav>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <!-- Navbar content -->
+    </nav> --}}
 </body>
 
 </html>
@@ -114,7 +129,6 @@
     function login() {
         window.location = '/login';
     }
-
     function search() {
         window.location = '/search';
     }
