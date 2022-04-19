@@ -1,25 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/ad9d9b1f44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!------ Include the above in your HEAD tag ---------->
+
+    
     <title>Register</title>
 </head>
+
 <body>
-    <h1>Register a new user!</h1>
-    <form method="post" action="register">
-        Name : <input type="text" name="txtName">
+    {{!-- <div class="container">
         <br>
-        Role: 
-        <select name="Role">
-            <option value="admin">Admin</option>
-            <option value="staff">Staff</option>
-        </select>
-        <br>
-        Password:
-        <input type="password" name="txtPassword">
-        <input type="submit" value="Register">
-    </form>
+        <p class="text-center">More bootstrap 4 components on <a href="http://bootstrap-ecommerce.com/">
+                Bootstrap-ecommerce.com</a></p>
+        <hr> --}}
+        {{> header}}
+
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Create a New account</h4>
+                <p class="text-center">Get started with your free account</p>
+                <p>
+                    <a href="#" class="btn btn-block btn-outline-primary btn-twitter"> <i class="fab fa-twitter"></i>   Login via
+                        Twitter</a>
+                    <a href="#" class="btn btn-block btn-outline-primary btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via
+                        facebook</a>
+
+                    <a href="#" class="btn btn-block btn-outline-danger btn-google"> <i class="fab fa-google-plus-g"></i>   Login via
+                        Google</a>
+                </p>
+                <p class="divider-text">
+                    <span class="bg-light">OR</span>
+                </p>
+                <form method="post" action="/register">
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="txtName" class="form-control" placeholder="Full name" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input name="txtEmail" class="form-control" placeholder="Email address" type="email"> <span style="color: red;">{{err}}</span>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input name="txtPassword" class="form-control" placeholder="Create password" type="password">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input name="txtRePassword" class="form-control" placeholder="Repeat password" type="password">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <select class="custom-select" style="max-width: 120px;">
+                            <option selected="">+84</option>
+                            <option value="1">+971</option>
+                            <option value="2">+972</option>
+                            <option value="3">+198</option>
+                            <option value="4">+701</option>
+                        </select>
+                        <input name="txtPhone" class="form-control" placeholder="Phone number" type="text">
+                    </div> <!-- form-group// -->
+                    {{!-- <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                        </div>
+                        <select class="form-control">
+                            <option selected=""> Select job type</option>
+                            <option>Designer</option>
+                            <option>Manager</option>
+                            <option>Accaunting</option>
+                        </select>
+                    </div> <!-- form-group end.// --> --}}
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fas fa-calendar-alt"></i></i> </span>
+                        </div>
+                        <input name="txtDate" placeholder="Date of Birth*" id="birthDate" class="form-control" type="date">
+                        <span style="color: red; font-weight: bold">(Date of Birth*)</span>
+                    </div> <!-- form-group// -->
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                        </div>
+                        <input name="txtAddress" class="form-control" placeholder="Address" type="text">
+
+                    </div> <!-- form-group// -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+                    </div> <!-- form-group// -->
+                    <p class="text-center">Have an account? <a href="/login">Log In</a> </p>
+                </form>
+            </article>
+            
+        </div> <!-- card.// -->
+
+        {{!--
+    </div> --}}
+   
+    <!--container end.//-->
+
+    {{!-- <br><br>
+    <article class="bg-secondary mb-3">
+        <div class="card-body text-center">
+            <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
+            <p class="h5 text-white">Components and templates <br> for Ecommerce, marketplace, booking websites
+                and product landing pages</p> <br>
+            <p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/">
+                    Bootstrap-ecommerce.com
+                    <i class="fa fa-window-restore "></i></a></p>
+        </div>
+        <br><br>
+    </article> --}}
+    {{> footer}}
 </body>
+
 </html>

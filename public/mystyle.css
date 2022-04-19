@@ -1,11 +1,6 @@
 body {
-    background-image: url("background.jpg");
-    background-size: cover;
-    /* background-repeat: no-repeat; */
-    
-    
-    /* font-family: 'Times New Roman', Times, serif; */
-    
+    background-image: url("newBack.jpg");
+    background-size: cover;    
 }
 
 .items {

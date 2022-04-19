@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shoppingCart.css">
+</head>
+
+<body>
+    {{> headerUser}}
+    <br><br>
+    <center><span style="color: red; font-weight: bold">{{status}}</span></center>
+    <br><br>
+    <section class="h-100 h-custom" style="background-color: #eee;">
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card shopping-cart" style="border-radius: 15px;">
+                        <div class="card-body text-black">
+
+                            <div class="row">
+                                <div class="col-lg-6 px-5 py-4">
+
+                                    <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase" style="color: orangered">Your products</h3>
+
+                                    {{#each purchasedProduct}}
+
+                                    <div class="d-flex align-items-center mb-5">
+                                        <div class="flex-shrink-0">
+                                            <img src={{img}} class="img-fluid" style="width: 150px;"
+                                                alt="Generic placeholder image">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <a href="#!" class="float-end text-black"><i class="fas fa-times"></i></a>
+                                            <h5 class="text-primary">{{name}}</h5>
+                                            <h6 style="color: #9e9e9e;">{{category}}</h6>
+                                        </div>
+                                    </div>
+
+                                    {{/each}}
+
+                                    
+                                    <hr class="mb-4" style="height: 2px; background-color: #1266f1; opacity: 1;">
+
+                                    <div class="d-flex justify-content-between px-x">
+                                        <p class="fw-bold">Sale: None</p>
+                                        <p class="fw-bold">0 VND</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between px-x">
+                                        <p class="fw-bold">Shipping fee:</p>
+                                        <p class="fw-bold">30000 VND</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between p-2 mb-2"
+                                        style="background-color: #e1f5fe;">
+                                        <h5 class="fw-bold mb-0">Total:</h5>
+                                        <h5 class="fw-bold mb-0">{{totalBill}} VND</h5>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 px-5 py-4">
+
+                                    <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase" style="color: orangered">Shipping information</h3>
+
+                                    <form class="mb-5" method="post" action="order">
+
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-5">
+                                                <div class="form-outline">
+                                                    <input type="text" id="typeExp" class="form-control form-control-lg"
+                                                        value="" placeholder="Full Name" size="7" id="exp"
+                                                        minlength="10" maxlength="100" />                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-5">
+                                                <div class="form-outline">
+                                                    <input type="number" name="phone" id="typeText"
+                                                        class="form-control form-control-lg" value=""
+                                                        placeholder="Phone Number" size="1" minlength="10"
+                                                        maxlength="10" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-5">
+                                            <input type="text" id="typeText" class="form-control form-control-lg"
+                                                siez="17" name="email" value="" placeholder="Email"
+                                                minlength="19" maxlength="100" />
+                                        </div>
+
+                                        <div class="form-outline mb-5">
+                                            <input type="text" name="txtAddress" id="typeName" class="form-control form-control-lg"
+                                                siez="17" placeholder="Address" value="" />
+                                        </div>
+
+                                        <div class="form-outline mb-5">
+                                            <input type="text" name="txtNote" id="typeName" class="form-control form-control-lg"
+                                                siez="17" value=""
+                                                placeholder="Note" />
+                                        </div>
+
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1" checked>
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                COD (Payment on delivery)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Bank transfer
+                                            </label>
+                                        </div>
+                                        <br><br>
+
+                                        <button type="submit" class="btn btn-primary btn-block btn-lg">Buy now</button>
+
+                                        <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
+                                            <a href="/user"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
+                                        </h5>
+
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br>
+    {{> footer}}
+</body>
+
+</html>

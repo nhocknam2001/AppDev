@@ -67,53 +67,53 @@
       </div><!-- /.header -->
 
       <div class="body_container">
-        <div class="left_sidebar">
-          <div class="left_sidebar_box">
+        <center>
+          <div class="left_sidebar">
+            <div class="left_sidebar_box">
 
-            <ul class="left_sidebar_first_level">
+              <ul class="left_sidebar_first_level">
 
-              <li><a href="/#" target="_blank"><i class="fa fa-dashboard"></i> My Site</a></li>
+                <b style="font-size: 50px; color: orangered;">Admin Page</b>
 
-              <li>
-                <a href="#"><i class="fa fa-plus"></i>&nbsp;Books <i class="arrow fa fa-angle-left"></i></a>
+                <li>
+                  <a href="#" style="font-size: 30px;">Books</i></a>
 
-                <ul class="left_sidebar_second_level">
-                  <li><a href="/admin/addProduct">Add Books</a></li>
-                  <li><a href="/admin/viewProduct">View Books</a></li>
-                </ul><!-- /.left_sidebar_second_level -->
-              </li>
+                  <ul class="left_sidebar_second_level">
+                    <li><a href="/admin/addProduct">Add Books</a></li>
+                    <li><a href="/admin/viewProduct">View Books</a></li>
+                  </ul><!-- /.left_sidebar_second_level -->
+                </li>
 
-              <li>
-                <a href="#"><i class="fa fa-plus"></i>&nbsp;Categories <i class="arrow fa fa-angle-left"></i></a>
+                <li>
+                  <a href="#" style="font-size: 30px;">Categories</a>
 
-                <ul class="left_sidebar_second_level">
-                  <li><a href="/admin/addCategories">Add Category</a></li>
-                  <li><a href="/admin/viewCategories">View Categories</a></li>
-                </ul><!-- /.left_sidebar_second_level -->
-              </li>
+                  <ul class="left_sidebar_second_level">
+                    <li><a href="/admin/addCategories">Add Category</a></li>
+                    <li><a href="/admin/viewCategories">View Categories</a></li>
+                  </ul><!-- /.left_sidebar_second_level -->
+                </li>
 
-              <li>
-                <a href="#"><i class="fa fa-plus"></i>&nbsp;Order <i class="arrow fa fa-angle-left"></i></a>
+                <li>
+                  <a href="#" style="font-size: 30px;">Order</a>
 
-                <ul class="left_sidebar_second_level">
-                  <li><a href="/admin/managerCustomer">Manager Customer Order</a></li>
-                  <li><a href="/admin/feedbacks">Feedbacks Of Customer</a></li>
-                </ul><!-- /.left_sidebar_second_level -->
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-gift"></i>&nbsp;Admin <i class="arrow fa fa-angle-left"></i></a>
+                  <ul class="left_sidebar_second_level">
+                    <li><a href="/admin/managerCustomer">Manager Customer Order</a></li>
+                    <li><a href="/admin/feedbacks">Feedbacks Of Customer</a></li>
+                  </ul><!-- /.left_sidebar_second_level -->
+                </li>
+                <li>
+                  <a href="#" style="font-size: 30px;">Admin</a>
 
-                <ul class="left_sidebar_second_level">
-                  <li><a href="/admin/listUser">List Users</a></li>
-                </ul><!-- /.left_sidebar_second_level -->
-              </li>
+                  <ul class="left_sidebar_second_level">
+                    <li><a href="/admin/listUser">List Users</a></li>
+                  </ul><!-- /.left_sidebar_second_level -->
+                </li>
 
-            </ul><!-- /.left_sidebar_first_level -->
-          </div><!-- /.left_sidebar_box -->
-
-        </div><!-- /.left_sidebar -->
-
-
+              </ul><!-- /.left_sidebar_first_level -->
+            </div><!-- /.left_sidebar_box -->
+            <img src="LogoSchool.png" alt="60%">
+          </div><!-- /.left_sidebar -->
+        </center>
         <div class="content">
           <div class="content_box">
             <div>
@@ -123,39 +123,34 @@
                   style="display: block; font-weight: bold; border: 1px solid #000; width: 80%; margin: 50px 125px; background-color: rgba(245, 245, 245, 0.336)">
                   <legend style="color: red; text-align:center; font-size:30px;">Edit Product</legend>
                   <input type="hidden" name="txtId" value="{{books._id}}">
-                  <label for="name">Input Book's name: </label>
+                  <label for="name">Book's name: </label>
                   <input type="text" name="txtName" id="txtName" value="{{books.name}}">
                   <br><br>
-                  <label for="category">Input Category: </label>
+                  <label for="category">Category: </label>
                   <select name="txtCategory">
                     {{#each categories}}
                     <option value="{{name}}">{{name}}</option>
                     {{/each}}
                   </select>
                   <br><br>
-                  <label for="category">Input Price: </label>
+                  <label for="category">Price: </label>
                   <input type="text" name="txtPrice" id="txtPrice" value="{{books.price}}">
                   <br><br>
                   <label for="category">Author: </label>
                   <input style="width: 40%;" type="text" name="txtAuthor" id="txtAuthor" value="{{books.author}}">
-                  <br><br>
-                  <span style="color: red;"></span>
                   <br><br>
                   <label for="category">Description: </label>
                   <input style="width: 40%;" type="text" name="txtDescription" id="txtDescription"
                     value="{{books.description}}">
                   <br><br>
 
-                  <label for="img">Input URL Image:</label>
+                  <label for="img">URL Image:</label>
                   <div style="display: inline;">
                     <center>
-                      <span style="width: 30%;" class="input-group-text" id="basic-addon3">Example:
-                        https://example.com/users/</span>
-                    </center>
                     <input style="width: 35%;" type="text" name="txtImage" id="txtImage" value="{{books.imgURL}}">
                   </div>
                   <br>
-                  <span style="color: red;"></span>
+                  <span style="color: orangered;"></span>
                   <br><br>
                   <button type="submit" class="btn btn-primary">Edit</button>
                 </fieldset>
@@ -212,6 +207,7 @@
   function login() {
     window.location = '/login';
   }
+
   function search() {
     window.location = '/search';
   }

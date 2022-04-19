@@ -67,55 +67,53 @@
             </div><!-- /.header -->
 
             <div class="body_container">
-                <div class="left_sidebar">
-                    <div class="left_sidebar_box">
+                <center>
+                    <div class="left_sidebar">
+                        <div class="left_sidebar_box">
 
-                        <ul class="left_sidebar_first_level">
+                            <ul class="left_sidebar_first_level">
 
-                            <li><a href="/#" target="_blank"><i class="fa fa-dashboard"></i> My Site</a></li>
+                                <b style="font-size: 50px; color: orangered;">Admin Page</b>
 
-                            <li>
-                                <a href="#"><i class="fa fa-plus"></i>&nbsp;Books <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Books</i></a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/addProduct">Add Books</a></li>
-                                    <li><a href="/admin/viewProduct">View Books</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/addProduct">Add Books</a></li>
+                                        <li><a href="/admin/viewProduct">View Books</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
 
-                            <li>
-                                <a href="#"><i class="fa fa-plus"></i>&nbsp;Categories <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Categories</a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/addCategories">Add Category</a></li>
-                                    <li><a href="/admin/viewCategories">View Categories</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/addCategories">Add Category</a></li>
+                                        <li><a href="/admin/viewCategories">View Categories</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
 
-                            <li>
-                                <a href="#"><i class="fa fa-plus"></i>&nbsp;Order <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Order</a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/managerCustomer">Manager Customer Order</a></li>
-                                    <li><a href="/admin/feedbacks">Feedbacks Of Customer</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-gift"></i>&nbsp;Admin <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/managerCustomer">Manager Customer Order</a></li>
+                                        <li><a href="/admin/feedbacks">Feedbacks Of Customer</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Admin</a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/listUser">List Users</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/listUser">List Users</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
 
-                        </ul><!-- /.left_sidebar_first_level -->
-                    </div><!-- /.left_sidebar_box -->
-
-                </div><!-- /.left_sidebar -->
+                            </ul><!-- /.left_sidebar_first_level -->
+                        </div><!-- /.left_sidebar_box -->
+                        <img src="LogoSchool.png" alt="60%">
+                    </div><!-- /.left_sidebar -->
+                </center>
                 <div class="content">
                     <div class="content_box">
                         <div class="wrapper">
@@ -141,7 +139,7 @@
                                             style="margin-left: 60px;">
                                     </div>
                                     <br>
-                                   
+
                                     <div class="mb-3" style="font-size: 20px; font-weight:bold">
                                         Category:<select name="txtCategory" style=" margin-left: 25px">
                                             {{#each categories}}
@@ -149,14 +147,14 @@
                                             {{/each}}
                                         </select>
                                     </div>
-                                    
+
                                     <br>
-                                      <div class="mb-3" style="font-size: 20px; font-weight:bold">
+                                    <div class="mb-3" style="font-size: 20px; font-weight:bold">
                                         Hot book:<select name="txthot" style=" margin-left: 25px">
                                             <option value="true">true</option>
                                             <option value="fail">fail</option>
                                         </select>
-                                         <input style="width: 40%;" type="hidden" name="hot" id="txtDescription"
+                                        <input style="width: 40%;" type="hidden" name="hot" id="txtDescription"
                                             value="{{hot}}">
                                     </div>
                                     <br>
@@ -186,42 +184,34 @@
             </div><!-- /.body_container -->
         </div><!-- /.container -->
         <div>
-
-
             <div>
+                <center style="background-color: lightblue;">
+                    <footer>
+                        <div class="footer_top" style="color: green;">
+                            <p style="font-weight: bold; font-size:30px; color: orangered">Information</p>
+                            FPT Book <br>
+                            Address: Pham Van Bach street, Cau Giay district, Hanoi<br>
+                            Phone number: +84123456789<br>
+                            Email: FptGreenwich@gmail.com<br>
+                            Open: 8AM to 10PM<br>
 
-                <footer>
-                    <div class="footer_top">
-                        <p style="font-weight: bold; font-size:20px; color:black">About us</p>
-                        <p style="margin-bottom: 30px;">Official and unique website of FPT Book. <br>
-                            Currently, we only accept orders on the website but do not accept orders anywhere
-                            else!<br><br><br><br><br>
-                        </p>
-                    </div>
-                    <div class="footer_top">
-                        <p style="font-weight: bold; font-size:20px; color:black">Support</p>
-                        <p>For any questions and suggestions, please contact Facebook, Instagram and Twitter.</p>
-                        <a href="https://www.facebook.com/profile.php?id=100011463742103"
-                            style="color: rgb(47, 0, 255);"><i class="fab fa-facebook"> Facebook</i></a> <br>
-                        <a href="https://www.instagram.com/_hyn_312/" style="color: rgb(255, 0, 221);"><i
-                                class="fab fa-instagram"> Instagram</i></a> <br>
-                        <a href="#"><i class="fab fa-twitter-square" style="color: rgb(0, 119, 255);"> Twitter</i></a>
-                        <br><br><br>
-                    </div>
-                    <div class="footer_top">
-                        <p style="font-weight: bold; font-size:20px; color:black">Information</p>
-                        FPT Book <br>
-                        Address: 46/180/63 Phu My, My Dinh II, Nam Tu Liem, Hanoi<br>
-                        Phone number: +84358253536<br>
-                        Email: quangnhgch190628@fpt.edu.vn<br>
-                        Open: 8AM to 10PM<br>
+                            WE ACCEPT
+                            <strong>
+                                <i class="fa fa-cc-visa" style="font-size:38px;color:red"></i>
+                                <i class="fa fa-cc-mastercard" style="font-size:38px;color:red"></i>
+                                <i class="fa fa-paypal" style="font-size:38px;color:blue"></i>
+                            </strong>
 
-                        WE ACCEPT
-                        <i class="fa fa-cc-visa" style="font-size:38px;color:red"></i>
-                        <i class="fa fa-cc-mastercard" style="font-size:38px;color:red"></i>
-                        <i class="fa fa-paypal" style="font-size:38px;color:blue"></i>
-                    </div>
-                </footer>
+                        </div>
+
+                        <center>
+                            <hr>
+                        </center>
+                        <div>
+                            <span style="font-weight: bold; margin-left: 0px;">No Copyright 2022 © FPT Book</span>
+                        </div>
+                    </footer>
+                </center>
             </div>
 
 
@@ -233,6 +223,7 @@
     function login() {
         window.location = '/login';
     }
+
     function search() {
         window.location = '/search';
     }

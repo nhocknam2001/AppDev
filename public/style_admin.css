@@ -20,8 +20,9 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 body{
-  background-image: url(https://hinhanhdep.net/wp-content/uploads/2017/12/hinh-anh-cuon-sach-dep-18.jpg);
-  background-repeat: no-repeat;
+  background-image: url(adminBG.jpg);
+  background-size: auto;
+  font-family: Calibri;
 }
 
 .container{
@@ -95,7 +96,7 @@ ul.dropdown-navbar-right ul li:hover{
  clear:both;
 }
 .left_sidebar{
- width:20%;
+ width: 20%;
  height: 655px;
  float:left;
  background-color: rgba(250, 250, 250, 0.205);

@@ -67,55 +67,53 @@
             </div><!-- /.header -->
 
             <div class="body_container">
-                <div class="left_sidebar">
-                    <div class="left_sidebar_box">
+                <center>
+                    <div class="left_sidebar">
+                        <div class="left_sidebar_box">
 
-                        <ul class="left_sidebar_first_level">
+                            <ul class="left_sidebar_first_level">
 
-                            <li><a href="/#" target="_blank"><i class="fa fa-dashboard"></i> My Site</a></li>
+                                <b style="font-size: 50px; color: orangered;">Admin Page</b>
 
-                            <li>
-                                <a href="#"><i class="fa fa-plus"></i>&nbsp;Books <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Books</i></a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/addProduct">Add Books</a></li>
-                                    <li><a href="/admin/viewProduct">View Books</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/addProduct">Add Books</a></li>
+                                        <li><a href="/admin/viewProduct">View Books</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
 
-                            <li>
-                                <a href="#"><i class="fa fa-plus"></i>&nbsp;Categories <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Categories</a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/addCategories">Add Category</a></li>
-                                    <li><a href="/admin/viewCategories">View Categories</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/addCategories">Add Category</a></li>
+                                        <li><a href="/admin/viewCategories">View Categories</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
 
-                            <li>
-                                <a href="#"><i class="fa fa-plus"></i>&nbsp;Order <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Order</a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/managerCustomer">Manager Customer Order</a></li>
-                                    <li><a href="/admin/feedbacks">Feedbacks Of Customer</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-gift"></i>&nbsp;Admin <i
-                                        class="arrow fa fa-angle-left"></i></a>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/managerCustomer">Manager Customer Order</a></li>
+                                        <li><a href="/admin/feedbacks">Feedbacks Of Customer</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
+                                <li>
+                                    <a href="#" style="font-size: 30px;">Admin</a>
 
-                                <ul class="left_sidebar_second_level">
-                                    <li><a href="/admin/listUser">List Users</a></li>
-                                </ul><!-- /.left_sidebar_second_level -->
-                            </li>
+                                    <ul class="left_sidebar_second_level">
+                                        <li><a href="/admin/listUser">List Users</a></li>
+                                    </ul><!-- /.left_sidebar_second_level -->
+                                </li>
 
-                        </ul><!-- /.left_sidebar_first_level -->
-                    </div><!-- /.left_sidebar_box -->
-
-                </div><!-- /.left_sidebar -->
+                            </ul><!-- /.left_sidebar_first_level -->
+                        </div><!-- /.left_sidebar_box -->
+                        <img src="LogoSchool.png" alt="60%">
+                    </div><!-- /.left_sidebar -->
+                </center>
                 <div class="content">
                     <div class="content_box">
                         <div class="wrapper">
@@ -125,12 +123,12 @@
                                         <thead style="background-color: yellow; color:black">
                                             <tr class="table-primary">
 
-                                                <th scope="col">ID</th>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Category</th>
-                                                <th scope="col">Price</th>
-                                                <th scope="col">Description</th>
-                                                <th scope="col">Image</th>
+                                                {{!-- <th scope="col">ID</th> --}}
+                                                <th scope="col" style="width: 220px;">Name</th>
+                                                {{!-- <th scope="col">Category</th> --}}
+                                                <th scope="col" style="width: 100px;">Price</th>
+                                                <th scope="col" style="width: 100px;">Description</th>
+                                                <th scope="col" style="width: 300px;">Image</th>
                                                 <th scope="col">Options</th>
 
 
@@ -139,24 +137,37 @@
                                         <tbody>
                                             {{#each products}}
                                             <tr>
-                                                <td class="items">{{_id}}</td>
-                                                <td class="items">{{name}}</td>
-                                                <td class="items">{{category}}</td>
-                                                <td class="items">{{price}} VND</td>
-                                                <td class="items">{{description}}</td>
-                                                <td class="items"> <img src="{{imgURL}}" width="180px" height="200px">
+                                                {{!-- <td class="items">{{_id}}</td> --}}
+                                                <td class="items" style="width: 220px;">{{name}}</td>
+                                                {{!-- <td class="items">{{category}}</td> --}}
+                                                <td class="items" style="width: 100px;">{{price}} VND</td>
+                                                <td class="items" style="width: 100px;">{{description}}</td>
+                                                <td class="items" style="width: 300px;"> <img src="{{imgURL}}"
+                                                        width="180px" height="200px">
                                                 </td>
                                                 <td>
                                                     <button name="button" value="OK" type="button">
-                                                        <a href="/admin/editProduct?id={{_id}}"
+                                                        {{!-- <a href="/admin/editProduct?id={{_id}}"
                                                             class="btn btn-info btn-sm">
-                                                            <i class="fas fa-edit"></i></a></button>
-                                                    <button name="button" value="OK" type="button"><a
+                                                            <i class="fas fa-edit"></i></a> --}}
+                                                        <a href=""
+                                                            class="btn btn-info btn-sm">
+                                                            <i class="fas fa-edit"></i></a>
+                                                    </button>
+                                                    <button name="button" value="OK" type="button">
+                                                        {{!-- <a
                                                             onclick="return confirm('Do you want to delete the product?')"
                                                             href="/admin/deleteBook?id={{_id}}"
                                                             class="btn btn-info btn-sm">
                                                             <i class="fas fa-trash"></i>
-                                                        </a></button>
+                                                        </a> --}}
+                                                        <a
+                                                            {{!-- onclick="return confirm('Do you want to delete the product?')" --}}
+                                                            href=""
+                                                            class="btn btn-info btn-sm">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    </button>
 
                                                 </td>
                                             </tr>
@@ -168,9 +179,11 @@
                         </div>
 
                         <script type="text/javascript">
+
                             function Redirect() {
                                 window.location.href = "/insertP";
                             }
+
                         </script>
 
                     </div><!-- /.content_box -->
@@ -180,38 +193,33 @@
         </div><!-- /.container -->
 
         <div>
-            <footer>
-                <div class="footer_top">
-                    <p style="font-weight: bold; font-size:20px; color:black">About us</p>
-                    <p style="margin-bottom: 30px;">Official and unique website of FPT Book. <br>
-                        Currently, we only accept orders on the website but do not accept orders anywhere
-                        else!<br><br><br><br><br>
-                    </p>
-                </div>
-                <div class="footer_top">
-                    <p style="font-weight: bold; font-size:20px; color:black">Support</p>
-                    <p>For any questions and suggestions, please contact Facebook, Instagram and Twitter.</p>
-                    <a href="https://www.facebook.com/profile.php?id=100011463742103" style="color: rgb(47, 0, 255);"><i
-                            class="fab fa-facebook"> Facebook</i></a> <br>
-                    <a href="https://www.instagram.com/rino_1409/" style="color: rgb(255, 0, 221);"><i
-                            class="fab fa-instagram"> Instagram</i></a> <br>
-                    <a href="#"><i class="fab fa-twitter-square" style="color: rgb(0, 119, 255);"> Twitter</i></a>
-                    <br><br><br>
-                </div>
-                <div class="footer_top">
-                    <p style="font-weight: bold; font-size:20px; color:black">Information</p>
-                    FPT Book <br>
-                    Address: 46/180/63 Phu My, My Dinh II, Nam Tu Liem, Hanoi<br>
-                    Phone number: +84358253536<br>
-                    Email: quangnhgch190628@fpt.edu.vn<br>
-                    Open: 8AM to 10PM<br>
+            <center style="background-color: lightblue;">
+                <footer>
+                    <div class="footer_top" style="color: green;">
+                        <p style="font-weight: bold; font-size:30px; color: orangered">Information</p>
+                        FPT Book <br>
+                        Address: Pham Van Bach street, Cau Giay district, Hanoi<br>
+                        Phone number: +84123456789<br>
+                        Email: FptGreenwich@gmail.com<br>
+                        Open: 8AM to 10PM<br>
 
-                    WE ACCEPT
-                    <i class="fa fa-cc-visa" style="font-size:38px;color:red"></i>
-                    <i class="fa fa-cc-mastercard" style="font-size:38px;color:red"></i>
-                    <i class="fa fa-paypal" style="font-size:38px;color:blue"></i>
-                </div>
-            </footer>
+                        WE ACCEPT
+                        <strong>
+                            <i class="fa fa-cc-visa" style="font-size:38px;color:red"></i>
+                            <i class="fa fa-cc-mastercard" style="font-size:38px;color:red"></i>
+                            <i class="fa fa-paypal" style="font-size:38px;color:blue"></i>
+                        </strong>
+
+                    </div>
+
+                    <center>
+                        <hr>
+                    </center>
+                    <div>
+                        <span style="font-weight: bold; margin-left: 0px;">No Copyright 2022 © FPT Book</span>
+                    </div>
+                </footer>
+            </center>
         </div>
     </body>
 
@@ -221,6 +229,7 @@
     function login() {
         window.location = '/login';
     }
+
     function search() {
         window.location = '/search';
     }
