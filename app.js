@@ -117,25 +117,20 @@ app.post('/login', async (req, res) => {
     const admin = await dbo.collection('Admin').findOne({ $and: [{ email: email }, { password: password }] });
 
     
-    if (!user) {
-        res.render('login', { err: "User dose not exist or wrong password." })
-        return
-    }
-    else {
+    if (admin) {
+        await res.cookie('adminId', admin.email)
 
+        res.redirect('/admin')
+    }
+    else if(user){
         await res.cookie('userId', user.email)
 
         res.redirect('/user')
     }
-    // if (admin != -1)
-    // {
-    //     await res.cookie('userId', user.email)
-
-    //     res.redirect('/user')
-    // }
-
-
-
+    else {
+        res.render('login', { err: "User dose not exist or wrong password." })
+        return
+    }
 })
 
 
