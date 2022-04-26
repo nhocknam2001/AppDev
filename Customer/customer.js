@@ -129,7 +129,7 @@ router.post('/feedback', async (req, res) => {
         date: date,
         feedback: fb,
         emailCustomer: email,
-        idOrder: id.toHexString()
+        idOrder: id,
     }
     await insertObjectToCollection(collectionName, newOrder)
 
@@ -141,11 +141,11 @@ router.post('/feedback', async (req, res) => {
 
 
 router.get('/cancel', async (req, res) => {
-        // const id = req.query.id
-        // const dbo = await getDatabase();
-        // const collectionName = 'Order'
-        // await deleteProduct(collectionName,id)
-        // res.redirect('/user/purchaseHistory')
+        const id = req.query.id
+        const dbo = await getDatabase();
+        const collectionName = 'Order'
+        await deleteProduct(collectionName,id)
+        res.redirect('/user/purchaseHistory')
 })
 
 
@@ -172,13 +172,13 @@ router.get('/shoppingCart', requireAuth, async (req, res) => {
         for(var key in dict) {
             let book = await dbo.collection(collectionName).findOne({_id: ObjectId(key)});
             console.log(book)
-            let categoryName = await CategoryProduct(book.category)
+            
             totalPro= book.price * dict[key]
             totalBill += totalPro
 
             totalBillAll = totalBill + 30000
 
-            purchasedProduct.push({name: book.name, category: categoryName.name, img: book.imgURL, price: book.price, quantity: dict[key], totalProduct: totalPro})
+            purchasedProduct.push({name: book.name,  img: book.imgURL, price: book.price, quantity: dict[key], totalProduct: totalPro})
          }
     
     }
